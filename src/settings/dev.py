@@ -11,12 +11,12 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "media/"
 ROOT_URLCONF = "src.urls"
 SECRET_KEY = "django-insecure-ahpa&b)#(q1#4wcsc7+9@irxotz1c+i9yzel22-r7mg2i&8@i0"
-STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = "static/"
 TIME_ZONE = "America/Chicago"
 USE_I18N = True
 USE_TZ = True
 WSGI_APPLICATION = "src.wsgi.application"
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 
 INSTALLED_APPS = [
@@ -42,7 +42,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

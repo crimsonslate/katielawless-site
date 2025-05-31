@@ -12,6 +12,18 @@ wheels = [
 ]
 
 [[package]]
+name = "crimsonslate-tools"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7e/b0/67b0de618e7587972f8a17f49afa950e5fbbdb74f1a110b3c4be2d2a8816/crimsonslate_tools-1.0.0.tar.gz", hash = "sha256:e5402da154ec3dc027943bd18f2109bdb5cc3e96385eb1b6ae0a231d4d99c069", size = 17361, upload-time = "2025-05-31T20:51:32.491Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/27/7a/6e57544a96a7a968865b6ce704b51e44ea6a1bb0ebf392a0738cd4341fa4/crimsonslate_tools-1.0.0-py3-none-any.whl", hash = "sha256:82833c9aa0986dab6f697432c61c48cc1d3db349707cb7dfeee28ad3dcac6f24", size = 15455, upload-time = "2025-05-31T20:51:31.374Z" },
+]
+
+[[package]]
 name = "django"
 version = "5.2.1"
 source = { registry = "https://pypi.org/simple" }
@@ -30,11 +42,15 @@ name = "katielawless-site"
 version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "crimsonslate-tools" },
     { name = "django" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "django", specifier = ">=5.2.1" }]
+requires-dist = [
+    { name = "crimsonslate-tools", specifier = "==1.0.0" },
+    { name = "django", specifier = ">=5.2.1" },
+]
 
 [[package]]
 name = "sqlparse"
